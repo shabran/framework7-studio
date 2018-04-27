@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; img-src * data: 'unsafe-inline'; connect-src * 'unsafe-inline'; frame-src *; media-src *;">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#2196f3">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <link rel="stylesheet" href="f7/css/framework7.css">
+    <link rel="stylesheet" href="f7/css/card.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <title>NowDB Studio</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="statusbar"></div>
+        <div class="views ios-edges">
+            <div id="view-main" class="view view-main">
+                <div class="page">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="title sliding">Swipe Out</div>
+                        </div>
+                    </div>
+                    <div class="page-content">
+                        <div class="card">
+                            <div class="card-content card-content-padding">
+                                <div class="list">
+                                <div class="title sliding" style="text-align: center; font:16px; background-color: grey">Swipe for actions</div>
+                                    <ul>
+                                      <li class="swipeout">
+                                        <div class="item-content swipeout-content">
+                                          <div class="item-media">
+                                            <i class="icon material-icons">home</i>
+                                          </div>
+                                          <div class="item-inner">
+                                            <div class="item-title">Swipe left on me please</div>
+                                          </div>
+                                        </div>
+                                        <div class="swipeout-actions-right">
+                                          <a href="#" id="open-more-actions" >More</a>
+                                          <a href="#" class="swipeout-delete">Delete</a>
+                                        </div>
+                                      </li>
+                                      <li class="swipeout">
+                                        <div class="item-content swipeout-content">
+                                          <div class="item-media">
+                                            <i class="icon material-icons">home</i>
+                                          </div>
+                                          <div class="item-inner">
+                                            <div class="item-title">Swipe left on me too</div>
+                                          </div>
+                                        </div>
+                                        <div class="swipeout-actions-right">
+                                          <a href="#" id="open-more-actions" >More</a>
+                                          <a href="#" class="swipeout-delete">Delete</a>
+                                        </div>
+                                      </li>
+                                      <li class="swipeout">
+                                        <div class="item-content swipeout-content">
+                                          <div class="item-media">
+                                            <i class="icon material-icons">home</i>
+                                          </div>
+                                          <div class="item-inner">
+                                            <div class="item-title">You can't delete me</div>
+                                          </div>
+                                        </div>
+                                        <div class="swipeout-actions-right">
+                                          <a href="#" id="open-more-actions" >More</a>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                <br/>
+                                <code>$$('#open-more-actions').on('click', function () {
+                                    app.actions.create({
+                                        buttons: [
+                                          [
+                                            {
+                                              text: 'Here comes some optional description or warning for actions below',
+                                              label: true,
+                                            },
+                                            {
+                                              text: 'Action 1',
+                                            },
+                                            {
+                                              text: 'Action 2',
+                                            },
+                                          ],
+                                          [
+                                            {
+                                              text: 'Cancel',
+                                              bold: true,
+                                            }
+                                          ]
+                                        ],
+                                      });.open();
+                                });</code>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content card-content-padding">
+                                <div class="list">
+                                    <div class="title sliding" style="text-align: center; font:16px; background-color: grey">Swipe with callback on remove</div>
+                                    <ul>
+                                      <li class="swipeout deleted-callback">
+                                        <div class="item-content swipeout-content">
+                                          <div class="item-inner">
+                                            <div class="item-title">Swipe left on me please</div>
+                                          </div>
+                                        </div>
+                                        <div class="swipeout-actions-right">
+                                          <a href="#" class="swipeout-delete">Delete</a>
+                                        </div>
+                                      </li>
+                                      <li class="swipeout deleted-callback">
+                                        <div class="item-content swipeout-content">
+                                          <div class="item-inner">
+                                            <div class="item-title">Swipe left on me too</div>
+                                          </div>
+                                        </div>
+                                        <div class="swipeout-actions-right">
+                                          <a href="#" class="swipeout-delete">Delete</a>
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div class="item-content">
+                                          <div class="item-inner">
+                                            <div class="item-title">I am not removable</div>
+                                          </div>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                </div>
+                                <br/>
+                                <code>$$('.deleted-callback').on('swipeout:deleted', function () {
+                                    app.dialog.alert('Thanks, item removed!');
+                                  });</code>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content card-content-padding">
+                                <div class="list">
+                                    <div class="title sliding" style="text-align: center; font:16px; background-color: grey">Swipe with callback on remove</div>
+                                    <ul>
+                                        <li class="swipeout">
+                                            <div class="item-content swipeout-content">
+                                              <div class="item-media">
+                                                <i class="icon material-icons">home</i>
+                                              </div>
+                                              <div class="item-inner">
+                                                <div class="item-title">Swipe right on me please</div>
+                                              </div>
+                                            </div>
+                                            <div class="swipeout-actions-left">
+                                              <a href="#" class="color-green alert-reply" id="alertreply">Reply</a>
+                                              <a href="#" class="color-blue alert-forward" id="alertfwd">Forward</a>
+                                            </div>
+                                          </li>
+                                          <li class="swipeout">
+                                            <div class="item-content swipeout-content">
+                                              <div class="item-media">
+                                                <i class="icon material-icons">home</i>
+                                              </div>
+                                              <div class="item-inner">
+                                                <div class="item-title">Swipe right on me too</div>
+                                              </div>
+                                            </div>
+                                            <div class="swipeout-actions-left">
+                                              <a href="#" class="color-green alert-reply" id="alertreply">Reply</a>
+                                              <a href="#" class="color-blue alert-forward" id="alertfwd">Forward</a>
+                                            </div>
+                                          </li>
+                                    </ul>
+                                </div>
+                            <br/>
+                                <code>$$('#alertreply').on('click', function () {
+                                    app.dialog.alert('Reply');
+                                  });
+                                  $$('#alertfwd').on('click', function () {
+                                    app.dialog.alert('Forward');
+                                  });</code>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content card-content-padding">
+                                <div class="list media-list">
+                                    <div class="title sliding" style="text-align: center; font:16px; background-color: grey">On both sides with overswipes</div>
+                                    <ul>
+                                        <li class="swipeout">
+                                          <div class="swipeout-content">
+                                            <a href="#" class="item-link item-content">
+                                              <div class="item-inner">
+                                                <div class="item-title-row">
+                                                  <div class="item-title">Facebook</div>
+                                                  <div class="item-after">17:14</div>
+                                                </div>
+                                                <div class="item-subtitle">New messages from John Doe</div>
+                                                <div class="item-text">
+                                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros. Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui laoreet, commodo augue id, pulvinar lacus.
+                                                </div>
+                                              </div>
+                                            </a>
+                                          </div>
+                                          <div class="swipeout-actions-left">
+                                            <a href="#" class="color-green alert-reply" id="alertreply2">Reply</a>
+                                            <a href="#" class="color-blue alert-forward" id="alertfwd2">Forward</a>
+                                          </div>
+                                          <div class="swipeout-actions-right">
+                                            <a href="#" id="open-more-actions2" >More</a>
+                                            <a href="#" class="color-orange alert-mark">Mark</a>
+                                            <a href="#" data-confirm="Are you sure you want to delete this item?" class="swipeout-delete swipeout-overswipe">Delete</a>
+                                          </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <br/>
+                                <code>$$('#alertreply').on('click', function () {
+                                    app.dialog.alert('Reply');
+                                  });
+                                  $$('#alertfwd').on('click', function () {
+                                    app.dialog.alert('Forward');
+                                  });
+                                $$('#open-more-actions').on('click', function () {
+                                    app.actions.create({
+                                        buttons: [
+                                          [
+                                            {
+                                              text: 'Here comes some optional description or warning for actions below',
+                                              label: true,
+                                            },
+                                            {
+                                              text: 'Action 1',
+                                            },
+                                            {
+                                              text: 'Action 2',
+                                            },
+                                          ],
+                                          [
+                                            {
+                                              text: 'Cancel',
+                                              bold: true,
+                                            }
+                                          ]
+                                        ],
+                                      });.open();
+                                });</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="f7/js/framework7.js"></script>
+    <script>
+        var $$ = Dom7;
+
+        var app = new Framework7({
+            root: '#app',
+            id: 'com.nowdb.studio',
+            name: 'NowDB Studio',
+            theme: 'auto',
+            touch: {
+                fastclick: true,
+                materialRipple: false
+            }
+        });
+
+        var view_main = app.views.create('#view-main', {
+            url: '/'
+        });
+        
+        var moreActions = app.actions.create({
+            buttons: [
+              [
+                {
+                  text: 'Here comes some optional description or warning for actions below',
+                  label: true,
+                },
+                {
+                  text: 'Action 1',
+                },
+                {
+                  text: 'Action 2',
+                },
+              ],
+              [
+                {
+                  text: 'Cancel',
+                  bold: true,
+                }
+              ]
+            ],
+          });
+        
+          $$('#open-more-actions').on('click', function () {
+            moreActions.open();
+          });
+          
+          $$('#open-more-actions2').on('click', function () {
+            moreActions.open();
+          });
+          
+          $$('.deleted-callback').on('swipeout:deleted', function () {
+            app.dialog.alert('Thanks, item removed!');
+          });
+          
+          $$('#alertreply').on('click', function () {
+            app.dialog.alert('Reply');
+          });
+          $$('#alertfwd').on('click', function () {
+            app.dialog.alert('Forward');
+          });
+          
+          $$('#alertreply2').on('click', function () {
+            app.dialog.alert('Reply');
+          });
+          $$('#alertfwd2').on('click', function () {
+            app.dialog.alert('Forward');
+          });
+    </script>
+</body>
+
+</html>

@@ -136,6 +136,90 @@ app.on('ready', function() {
                         var menu = Menu.buildFromTemplate(template);
                         searchbarWindow.setMenu(menu);
                     }
+                }, {
+                    label: "Action Sheet",
+                    click: function() {
+                        actionsheetWindow = new BrowserWindow({
+                            width: 380,
+                            height: 600,
+                            icon: path.join(__dirname, 'f7builder/img/favicon.png')
+                        })
+
+                        actionsheetWindow.loadURL(url.format({
+                            pathname: path.join(__dirname, 'f7builder/index_actionsheet.html'),
+                            protocol: 'file:',
+                            slashes: true
+                        }))
+
+                        var template = [{
+                            label: "View",
+                            submenu: [{
+                                label: "Reload",
+                                click: function() {
+                                    actionsheetWindow.webContents.reload();
+                                }
+                            }]
+                        }]
+
+                        var menu = Menu.buildFromTemplate(template);
+                        actionsheetWindow.setMenu(menu);
+                    }
+                }, {
+                    label: "Swipeout",
+                    click: function() {
+                        swipeoutWindow = new BrowserWindow({
+                            width: 380,
+                            height: 600,
+                            icon: path.join(__dirname, 'f7builder/img/favicon.png')
+                        })
+
+                        swipeoutWindow.loadURL(url.format({
+                            pathname: path.join(__dirname, 'f7builder/index_swipeout.html'),
+                            protocol: 'file:',
+                            slashes: true
+                        }))
+
+                        var template = [{
+                            label: "View",
+                            submenu: [{
+                                label: "Reload",
+                                click: function() {
+                                    swipeoutWindow.webContents.reload();
+                                }
+                            }]
+                        }]
+
+                        var menu = Menu.buildFromTemplate(template);
+                        swipeoutWindow.setMenu(menu);
+                    }
+                }, {
+                    label: "Calender/Datepicker",
+                    click: function() {
+                        calenderWindow = new BrowserWindow({
+                            width: 380,
+                            height: 600,
+                            icon: path.join(__dirname, 'f7builder/img/favicon.png')
+                        })
+
+                        calenderWindow.loadURL(url.format({
+                            pathname: path.join(__dirname, 'f7builder/index_calender.html'),
+                            protocol: 'file:',
+                            slashes: true
+                        }))
+
+                        var template = [{
+                            label: "View",
+                            submenu: [{
+                                label: "Reload",
+                                click: function() {
+                                    calenderWindow.webContents.reload();
+                                }
+                            }]
+                        }]
+
+                        var menu = Menu.buildFromTemplate(template);
+                        calenderWindow.setMenu(menu);
+                    }
                 }]
             }]
         }]
