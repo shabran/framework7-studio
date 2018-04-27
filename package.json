@@ -1,0 +1,60 @@
+{
+    "name": "studio",
+    "version": "1.0.0",
+    "description": "NowDB Studio",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "postinstall": "install-app-deps",
+        "pack": "build --dir",
+        "dist": "build"
+    },
+    "build": {
+        "appId": "com.nowdb.studio",
+        "dmg": {
+            "contents": [{
+                    "x": 110,
+                    "y": 150
+                },
+                {
+                    "x": 240,
+                    "y": 150,
+                    "type": "link",
+                    "path": "/Applications"
+                }
+            ]
+        },
+        "linux": {
+            "target": [
+                "AppImage",
+                "deb"
+            ]
+        },
+        "win": {
+            "target": "NSIS",
+            "icon": "f7builder/favicon.png"
+        }
+    },
+    "repository": "",
+    "keywords": [
+        "NowDB",
+        "Studio",
+        "Framework7"
+    ],
+    "author": "SB Academy <taufiksu@gmail.com>",
+    "license": "CC0-1.0",
+    "devDependencies": {
+        "electron": "~1.8.2",
+        "electron-builder": "^20.10.0"
+    },
+    "dependencies": {
+        "ajv": "^6.0.0",
+        "dialogs": "^1.1.20",
+        "electron-packager": "^12.0.1",
+        "electron-prompt": "^0.5.0",
+        "electron-reload": "^1.2.2",
+        "electron-tabs": "^0.9.1",
+        "node-run-cmd": "^1.0.1",
+        "yarn": "^1.6.0"
+    }
+}
