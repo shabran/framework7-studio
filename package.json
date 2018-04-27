@@ -12,7 +12,8 @@
     "build": {
         "appId": "com.nowdb.studio",
         "dmg": {
-            "contents": [{
+            "contents": [
+                {
                     "x": 110,
                     "y": 150
                 },
@@ -32,7 +33,7 @@
         },
         "win": {
             "target": "NSIS",
-            "icon": "f7builder/favicon.png"
+            "icon": "f7builder/img/favicon.png"
         }
     },
     "repository": "",
@@ -41,20 +42,13 @@
         "Studio",
         "Framework7"
     ],
-    "author": "SB Academy <taufiksu@gmail.com>",
+    "author": "SB Academy <taufiksu@gmail.com, aseprizal70@gmail.com>",
     "license": "CC0-1.0",
     "devDependencies": {
-        "electron": "~1.8.2",
+        "electron": "^1.8.4",
         "electron-builder": "^20.10.0"
     },
     "dependencies": {
-        "ajv": "^6.0.0",
-        "dialogs": "^1.1.20",
-        "electron-packager": "^12.0.1",
-        "electron-prompt": "^0.5.0",
-        "electron-reload": "^1.2.2",
-        "electron-tabs": "^0.9.1",
-        "node-run-cmd": "^1.0.1",
-        "yarn": "^1.6.0"
+        "electron-packager": "^12.0.1"
     }
 }

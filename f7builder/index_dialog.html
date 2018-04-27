@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="f7/css/framework7.css">
     <link rel="stylesheet" href="f7/css/card.css">
     <link rel="stylesheet" href="css/icons.css">
-    <title>Framework7 Studio</title>
+    <title>NowDB Studio</title>
 </head>
 
 <body>
@@ -49,6 +49,109 @@
                                 <code>app.dialog.confirm('Are you feel good today?', function() {
                                         app.dialog.alert('Great!');
                                     });</code>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content card-content-padding">
+                                <button class="button col button-fill" id="alert-prompt-confirm">Alert Prompt Confirm</button>
+                                <br/>
+                                <code>app.dialog.prompt('What is your name?', function (name) {
+                                    app.dialog.confirm('Are you sure that your name is ' + name + '?', function () {
+                                      app.dialog.alert('Ok, your name is ' + name);
+                                    });
+                                });</code>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="card">
+                            <div class="card-content card-content-padding">
+                                <button class="button col button-fill" id="alert-login">Alert Login</button>
+                                <br/>
+                                <code>$$('#open-login').on('click', function () {
+                                    app.dialog.login('Enter your username and password', function (username, password) {
+                                      app.dialog.alert('Thank you!<br>Username:' + username + '<br>Password:' + password);
+                                    });
+                                  });</code>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content card-content-padding">
+                                <button class="button col button-fill" id="open-vertical">Alert Open Vertical</button>
+                                <br/>
+                                <code>$$('#open-vertical').on('click', function () {
+                                    app.dialog.create({
+                                      title: 'Vertical Buttons',
+                                      text: 'Dialog with vertical buttons',
+                                      buttons: [
+                                        {
+                                          text: 'Button 1',
+                                        },
+                                        {
+                                          text: 'Button 2',
+                                        },
+                                        {
+                                          text: 'Button 3',
+                                        },
+                                      ],
+                                      verticalButtons: true,
+                                    }).open();
+                                  });</code>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content card-content-padding">
+                                <button class="button col button-fill" id="open-preloader">Preloader</button>
+                                <br/>
+                                <code>$$('#open-preloader').on('click', function () {
+                                    app.dialog.preloader();
+                                    setTimeout(function () {
+                                      app.dialog.close();
+                                    }, 3000);
+                                  });</code>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content card-content-padding">
+                                <button class="button col button-fill" id="open-preloadercustom">Preloader Custom</button>
+                                <br/>
+                                <code>$$('#open-preloadercustom').on('click', function () {
+                                    app.dialog.preloader("My Text ....");
+                                    setTimeout(function () {
+                                      app.dialog.close();
+                                    }, 3000);
+                                  });</code>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content card-content-padding">
+                                <button class="button col button-fill" id="open-progress">Progress Determinite</button>
+                                <br/>
+                                <code>$$('#open-progress').on('click', function () {
+                                    var progress = 0;
+                                    var dialog = app.dialog.progress('Loading assets', progress);
+                                    dialog.setText('Image 1 of 10');
+                                    var interval = setInterval(function () {
+                                      progress += 10;
+                                      dialog.setProgress(progress);
+                                      dialog.setText('Image ' + ((progress) / 10) + ' of 10');
+                                      if (progress === 100) {
+                                        clearInterval(interval);
+                                        dialog.close();
+                                      }
+                                    }, 300)
+                                  });</code>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content card-content-padding">
+                                <button class="button col button-fill" id="open-progress-infinite">Progress Infinite</button>
+                                <br/>
+                                <code>$$('#open-progress-infinite').on('click', function () {
+                                    app.dialog.progress();
+                                    setTimeout(function () {
+                                      app.dialog.close();
+                                    }, 3000);
+                                  });</code>
                             </div>
                         </div>
                     </div>
@@ -88,6 +191,75 @@
                 app.dialog.alert('Great!');
             });
         });
+        
+        $$('#alert-prompt-confirm').on('click', function () {
+            app.dialog.prompt('What is your name?', function (name) {
+              app.dialog.confirm('Are you sure that your name is ' + name + '?', function () {
+                app.dialog.alert('Ok, your name is ' + name);
+              });
+            });
+        });
+        
+        $$('#alert-login').on('click', function () {
+            app.dialog.login('Enter your username and password', function (username, password) {
+              app.dialog.alert('Thank you!<br>Username:' + username + '<br>Password:' + password);
+            });
+        });
+        
+        $$('#open-vertical').on('click', function () {
+            app.dialog.create({
+              title: 'Vertical Buttons',
+              text: 'Dialog with vertical buttons',
+              buttons: [
+                {
+                  text: 'Button 1',
+                },
+                {
+                  text: 'Button 2',
+                },
+                {
+                  text: 'Button 3',
+                },
+              ],
+              verticalButtons: true,
+            }).open();
+        });
+        
+        $$('#open-preloader').on('click', function () {
+            app.dialog.preloader();
+            setTimeout(function () {
+              app.dialog.close();
+            }, 3000);
+          });
+        
+        $$('#open-preloadercustom').on('click', function () {
+            app.dialog.preloader("My Text...");
+            setTimeout(function () {
+              app.dialog.close();
+            }, 3000);
+          });
+        
+        $$('#open-progress').on('click', function () {
+            var progress = 0;
+            var dialog = app.dialog.progress('Loading assets', progress);
+            dialog.setText('Image 1 of 10');
+            var interval = setInterval(function () {
+              progress += 10;
+              dialog.setProgress(progress);
+              dialog.setText('Image ' + ((progress) / 10) + ' of 10');
+              if (progress === 100) {
+                clearInterval(interval);
+                dialog.close();
+              }
+            }, 300)
+          });
+        
+        $$('#open-progress-infinite').on('click', function () {
+            app.dialog.progress();
+            setTimeout(function () {
+              app.dialog.close();
+            }, 3000);
+          });
     </script>
 </body>
 
