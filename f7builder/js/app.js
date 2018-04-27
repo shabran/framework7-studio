@@ -2,8 +2,8 @@ var $$ = Dom7;
 
 var app = new Framework7({
     root: '#app',
-    id: 'com.nowdb.studio',
-    name: 'NowDB Studio',
+    id: 'com.framework7.studio',
+    name: 'framework7 Studio',
     theme: 'auto',
     routes: routes,
     touch: {
@@ -139,19 +139,3 @@ function notification_closetimeout(icon, title, titleRightText, subtitle, text, 
 
     notifi.open();
 }
-
-var token = '';
-
-var project = '';
-
-var appid = '';
-
-var io_v2 = 'https://io.nowdb.cloud/v2/';
-
-var io_file = 'https://files.nowdb.cloud/';
-
-var io_uploader = 'https://io.nowdb.cloud/files/uploader_relative';
-
-//var io_relay = 'https://relay.nowdb.cloud';
-
-//var socket = io.connect(io_relay);

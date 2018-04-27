@@ -1,7 +1,7 @@
 {
-    "name": "studio",
+    "name": "framework7",
     "version": "1.0.0",
-    "description": "NowDB Studio",
+    "description": "Framework7 Studio",
     "main": "main.js",
     "scripts": {
         "start": "electron .",
