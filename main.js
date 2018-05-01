@@ -220,6 +220,34 @@ app.on('ready', function() {
                         var menu = Menu.buildFromTemplate(template);
                         calenderWindow.setMenu(menu);
                     }
+                }, {
+                    label: "Notifications",
+                    click: function() {
+                        notifWindow = new BrowserWindow({
+                            width: 380,
+                            height: 600,
+                            icon: path.join(__dirname, 'f7builder/img/favicon.png')
+                        })
+
+                        notifWindow.loadURL(url.format({
+                            pathname: path.join(__dirname, 'f7builder/index_notification.html'),
+                            protocol: 'file:',
+                            slashes: true
+                        }))
+
+                        var template = [{
+                            label: "View",
+                            submenu: [{
+                                label: "Reload",
+                                click: function() {
+                                    notifWindow.webContents.reload();
+                                }
+                            }]
+                        }]
+
+                        var menu = Menu.buildFromTemplate(template);
+                        notifWindow.setMenu(menu);
+                    }
                 }]
             }]
         }]
