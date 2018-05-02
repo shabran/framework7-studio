@@ -322,37 +322,37 @@ app.on('ready', function() {
                             var menu = Menu.buildFromTemplate(template);
                             swiper.setMenu(menu);
                         }
-                    }
-                }, {
-                    label: "Notifications",
-                    click: function() {
-                        notifWindow = new BrowserWindow({
-                            width: 380,
-                            height: 600,
-                            icon: path.join(__dirname, 'f7builder/img/favicon.png')
-                        })
+                    }, {
+                        label: "Notifications",
+                        click: function() {
+                            notifWindow = new BrowserWindow({
+                                width: 380,
+                                height: 600,
+                                icon: path.join(__dirname, 'f7builder/img/favicon.png')
+                            })
 
-                        notifWindow.loadURL(url.format({
-                            pathname: path.join(__dirname, 'f7builder/index_notification.html'),
-                            protocol: 'file:',
-                            slashes: true
-                        }))
+                            notifWindow.loadURL(url.format({
+                                pathname: path.join(__dirname, 'f7builder/index_notification.html'),
+                                protocol: 'file:',
+                                slashes: true
+                            }))
 
-                        var template = [{
-                            label: "View",
-                            submenu: [{
-                                label: "Reload",
-                                click: function() {
-                                    notifWindow.webContents.reload();
-                                }
+                            var template = [{
+                                label: "View",
+                                submenu: [{
+                                    label: "Reload",
+                                    click: function() {
+                                        notifWindow.webContents.reload();
+                                    }
+                                }]
                             }]
-                        }]
 
-                        var menu = Menu.buildFromTemplate(template);
-                        notifWindow.setMenu(menu);
+                            var menu = Menu.buildFromTemplate(template);
+                            notifWindow.setMenu(menu);
+                        }
                     }
-                }]
                 ]
+
             }]
         }]
 
@@ -400,7 +400,7 @@ app.on('ready', function() {
     mainWindow.on('closed', function() {
         mainWindow = null;
     })
-})
+});
 
 app.on('window-all-closed', function() {
     // On OS X it is common for applications and their menu bar
@@ -408,7 +408,7 @@ app.on('window-all-closed', function() {
     //if (process.platform !== 'darwin') {
     //    app.quit()
     //}
-})
+});
 
 app.on('activate', function() {
     // On OS X it's common to re-create a window in the app when the
@@ -416,4 +416,4 @@ app.on('activate', function() {
     if (mainWindow === null) {
         createWindow()
     }
-})
+});
