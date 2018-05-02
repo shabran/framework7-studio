@@ -53,44 +53,287 @@ app.on('ready', function() {
             }, {
                 label: "Additional",
                 submenu: [{
-                    label: "Dialog",
-                    click: function() {
-                        dialogWindow = new BrowserWindow({
-                            width: 380,
-                            height: 600,
-                            icon: path.join(__dirname, 'f7builder/img/favicon.png')
-                        })
+                        label: "Dialog",
+                        click: function() {
+                            dialogWindow = new BrowserWindow({
+                                width: 380,
+                                height: 600,
+                                icon: path.join(__dirname, 'f7builder/img/favicon.png')
+                            })
 
-                        dialogWindow.loadURL(url.format({
-                            pathname: path.join(__dirname, 'f7builder/index_dialog.html'),
-                            protocol: 'file:',
-                            slashes: true
-                        }))
+                            dialogWindow.loadURL(url.format({
+                                pathname: path.join(__dirname, 'f7builder/index_dialog.html'),
+                                protocol: 'file:',
+                                slashes: true
+                            }))
 
-                        var template = [{
-                            label: "View",
-                            submenu: [{
-                                label: "Reload",
-                                click: function() {
-                                    dialogWindow.webContents.reload();
-                                }
+                            var template = [{
+                                label: "View",
+                                submenu: [{
+                                    label: "Reload",
+                                    click: function() {
+                                        dialogWindow.webContents.reload();
+                                    }
+                                }]
                             }]
-                        }]
 
-                        var menu = Menu.buildFromTemplate(template);
-                        dialogWindow.setMenu(menu);
+                            var menu = Menu.buildFromTemplate(template);
+                            dialogWindow.setMenu(menu);
+                        }
+                    }, {
+                        label: "Searchbar Expandable",
+                        click: function() {
+                            searchbarWindow = new BrowserWindow({
+                                width: 380,
+                                height: 600,
+                                icon: path.join(__dirname, 'f7builder/img/favicon.png')
+                            })
+
+                            searchbarWindow.loadURL(url.format({
+                                pathname: path.join(__dirname, 'f7builder/index_searchbar.html'),
+                                protocol: 'file:',
+                                slashes: true
+                            }))
+
+                            var template = [{
+                                label: "View",
+                                submenu: [{
+                                    label: "Reload",
+                                    click: function() {
+                                        searchbarWindow.webContents.reload();
+                                    }
+                                }]
+                            }]
+
+                            var menu = Menu.buildFromTemplate(template);
+                            searchbarWindow.setMenu(menu);
+                        }
+                    }, {
+                        label: "Searchbar Static",
+                        click: function() {
+                            searchbarWindow = new BrowserWindow({
+                                width: 380,
+                                height: 600,
+                                icon: path.join(__dirname, 'f7builder/img/favicon.png')
+                            })
+
+                            searchbarWindow.loadURL(url.format({
+                                pathname: path.join(__dirname, 'f7builder/index_searchbarstatic.html'),
+                                protocol: 'file:',
+                                slashes: true
+                            }))
+
+                            var template = [{
+                                label: "View",
+                                submenu: [{
+                                    label: "Reload",
+                                    click: function() {
+                                        searchbarWindow.webContents.reload();
+                                    }
+                                }]
+                            }]
+
+                            var menu = Menu.buildFromTemplate(template);
+                            searchbarWindow.setMenu(menu);
+                        }
+                    }, {
+                        label: "Action Sheet",
+                        click: function() {
+                            actionsheetWindow = new BrowserWindow({
+                                width: 380,
+                                height: 600,
+                                icon: path.join(__dirname, 'f7builder/img/favicon.png')
+                            })
+
+                            actionsheetWindow.loadURL(url.format({
+                                pathname: path.join(__dirname, 'f7builder/index_actionsheet.html'),
+                                protocol: 'file:',
+                                slashes: true
+                            }))
+
+                            var template = [{
+                                label: "View",
+                                submenu: [{
+                                    label: "Reload",
+                                    click: function() {
+                                        actionsheetWindow.webContents.reload();
+                                    }
+                                }]
+                            }]
+
+                            var menu = Menu.buildFromTemplate(template);
+                            actionsheetWindow.setMenu(menu);
+                        }
+                    }, {
+                        label: "Swipeout",
+                        click: function() {
+                            swipeoutWindow = new BrowserWindow({
+                                width: 380,
+                                height: 600,
+                                icon: path.join(__dirname, 'f7builder/img/favicon.png')
+                            })
+
+                            swipeoutWindow.loadURL(url.format({
+                                pathname: path.join(__dirname, 'f7builder/index_swipeout.html'),
+                                protocol: 'file:',
+                                slashes: true
+                            }))
+
+                            var template = [{
+                                label: "View",
+                                submenu: [{
+                                    label: "Reload",
+                                    click: function() {
+                                        swipeoutWindow.webContents.reload();
+                                    }
+                                }]
+                            }]
+
+                            var menu = Menu.buildFromTemplate(template);
+                            swipeoutWindow.setMenu(menu);
+                        }
+                    }, {
+                        label: "Calender/Datepicker",
+                        click: function() {
+                            calenderWindow = new BrowserWindow({
+                                width: 380,
+                                height: 600,
+                                icon: path.join(__dirname, 'f7builder/img/favicon.png')
+                            })
+
+                            calenderWindow.loadURL(url.format({
+                                pathname: path.join(__dirname, 'f7builder/index_calender.html'),
+                                protocol: 'file:',
+                                slashes: true
+                            }))
+
+                            var template = [{
+                                label: "View",
+                                submenu: [{
+                                    label: "Reload",
+                                    click: function() {
+                                        calenderWindow.webContents.reload();
+                                    }
+                                }]
+                            }]
+
+                            var menu = Menu.buildFromTemplate(template);
+                            calenderWindow.setMenu(menu);
+                        }
+                    }, {
+                        label: "Picker",
+                        click: function() {
+                            Picker = new BrowserWindow({
+                                width: 380,
+                                height: 600,
+                                icon: path.join(__dirname, 'f7builder/img/favicon.png')
+                            })
+                            Picker.loadURL(url.format({
+                                pathname: path.join(__dirname, 'f7builder/index_picker.html'),
+                                protocol: 'file:',
+                                slashes: true
+                            }))
+                            var template = [{
+                                label: "View",
+                                submenu: [{
+                                    label: "Reload",
+                                    click: function() {
+                                        Picker.webContents.reload();
+                                    }
+                                }]
+                            }]
+                            var menu = Menu.buildFromTemplate(template);
+                            Picker.setMenu(menu);
+
+                        }
+                    }, {
+                        label: "Dynamic Popup",
+                        click: function() {
+                            Popup = new BrowserWindow({
+                                width: 380,
+                                height: 600,
+                                icon: path.join(__dirname, 'f7builder/img/favicon.png')
+                            })
+                            Popup.loadURL(url.format({
+                                pathname: path.join(__dirname, 'f7builder/index_popup.html'),
+                                protocol: 'file:',
+                                slashes: true
+                            }))
+                            var template = [{
+                                label: "View",
+                                submenu: [{
+                                    label: "Reload",
+                                    click: function() {
+                                        Popup.webContents.reload();
+                                    }
+                                }]
+                            }]
+                            var menu = Menu.buildFromTemplate(template);
+                            Popup.setMenu(menu);
+                        }
+                    },
+                    {
+                        label: "Progress bar",
+                        click: function() {
+                            progress = new BrowserWindow({
+                                width: 380,
+                                height: 600,
+                                icon: path.join(__dirname, 'f7builder/img/favicon.png')
+                            })
+                            progress.loadURL(url.format({
+                                pathname: path.join(__dirname, 'f7builder/index_progressbar.html'),
+                                protocol: 'file:',
+                                slashes: true
+                            }))
+                            var template = [{
+                                label: "View",
+                                submenu: [{
+                                    label: "Reload",
+                                    click: function() {
+                                        progress.webContents.reload();
+                                    }
+                                }]
+                            }]
+                            var menu = Menu.buildFromTemplate(template);
+                            progress.setMenu(menu);
+                        }
+                    }, {
+                        label: "Swiper",
+                        click: function() {
+                            swiper = new BrowserWindow({
+                                width: 380,
+                                height: 600,
+                                icon: path.join(__dirname, 'f7builder/img/favicon.png')
+                            })
+                            swiper.loadURL(url.format({
+                                pathname: path.join(__dirname, 'f7builder/index_swiper.html'),
+                                protocol: 'file:',
+                                slashes: true
+                            }))
+                            var template = [{
+                                label: "View",
+                                submenu: [{
+                                    label: "Reload",
+                                    click: function() {
+                                        progress.webContents.reload();
+                                    }
+                                }]
+                            }]
+                            var menu = Menu.buildFromTemplate(template);
+                            swiper.setMenu(menu);
+                        }
                     }
                 }, {
-                    label: "Searchbar Expandable",
+                    label: "Notifications",
                     click: function() {
-                        searchbarWindow = new BrowserWindow({
+                        notifWindow = new BrowserWindow({
                             width: 380,
                             height: 600,
                             icon: path.join(__dirname, 'f7builder/img/favicon.png')
                         })
 
-                        searchbarWindow.loadURL(url.format({
-                            pathname: path.join(__dirname, 'f7builder/index_searchbar.html'),
+                        notifWindow.loadURL(url.format({
+                            pathname: path.join(__dirname, 'f7builder/index_notification.html'),
                             protocol: 'file:',
                             slashes: true
                         }))
@@ -100,127 +343,16 @@ app.on('ready', function() {
                             submenu: [{
                                 label: "Reload",
                                 click: function() {
-                                    searchbarWindow.webContents.reload();
+                                    notifWindow.webContents.reload();
                                 }
                             }]
                         }]
 
                         var menu = Menu.buildFromTemplate(template);
-                        searchbarWindow.setMenu(menu);
-                    }
-                }, {
-                    label: "Searchbar Static",
-                    click: function() {
-                        searchbarWindow = new BrowserWindow({
-                            width: 380,
-                            height: 600,
-                            icon: path.join(__dirname, 'f7builder/img/favicon.png')
-                        })
-
-                        searchbarWindow.loadURL(url.format({
-                            pathname: path.join(__dirname, 'f7builder/index_searchbarstatic.html'),
-                            protocol: 'file:',
-                            slashes: true
-                        }))
-
-                        var template = [{
-                            label: "View",
-                            submenu: [{
-                                label: "Reload",
-                                click: function() {
-                                    searchbarWindow.webContents.reload();
-                                }
-                            }]
-                        }]
-
-                        var menu = Menu.buildFromTemplate(template);
-                        searchbarWindow.setMenu(menu);
-                    }
-                }, {
-                    label: "Action Sheet",
-                    click: function() {
-                        actionsheetWindow = new BrowserWindow({
-                            width: 380,
-                            height: 600,
-                            icon: path.join(__dirname, 'f7builder/img/favicon.png')
-                        })
-
-                        actionsheetWindow.loadURL(url.format({
-                            pathname: path.join(__dirname, 'f7builder/index_actionsheet.html'),
-                            protocol: 'file:',
-                            slashes: true
-                        }))
-
-                        var template = [{
-                            label: "View",
-                            submenu: [{
-                                label: "Reload",
-                                click: function() {
-                                    actionsheetWindow.webContents.reload();
-                                }
-                            }]
-                        }]
-
-                        var menu = Menu.buildFromTemplate(template);
-                        actionsheetWindow.setMenu(menu);
-                    }
-                }, {
-                    label: "Swipeout",
-                    click: function() {
-                        swipeoutWindow = new BrowserWindow({
-                            width: 380,
-                            height: 600,
-                            icon: path.join(__dirname, 'f7builder/img/favicon.png')
-                        })
-
-                        swipeoutWindow.loadURL(url.format({
-                            pathname: path.join(__dirname, 'f7builder/index_swipeout.html'),
-                            protocol: 'file:',
-                            slashes: true
-                        }))
-
-                        var template = [{
-                            label: "View",
-                            submenu: [{
-                                label: "Reload",
-                                click: function() {
-                                    swipeoutWindow.webContents.reload();
-                                }
-                            }]
-                        }]
-
-                        var menu = Menu.buildFromTemplate(template);
-                        swipeoutWindow.setMenu(menu);
-                    }
-                }, {
-                    label: "Calender/Datepicker",
-                    click: function() {
-                        calenderWindow = new BrowserWindow({
-                            width: 380,
-                            height: 600,
-                            icon: path.join(__dirname, 'f7builder/img/favicon.png')
-                        })
-
-                        calenderWindow.loadURL(url.format({
-                            pathname: path.join(__dirname, 'f7builder/index_calender.html'),
-                            protocol: 'file:',
-                            slashes: true
-                        }))
-
-                        var template = [{
-                            label: "View",
-                            submenu: [{
-                                label: "Reload",
-                                click: function() {
-                                    calenderWindow.webContents.reload();
-                                }
-                            }]
-                        }]
-
-                        var menu = Menu.buildFromTemplate(template);
-                        calenderWindow.setMenu(menu);
+                        notifWindow.setMenu(menu);
                     }
                 }]
+                ]
             }]
         }]
 
