@@ -16,9 +16,6 @@ var editor = grapesjs.init({
     allowScripts: 1
 });
 
-var dc = editor.getComponents();
-dc.add('<script src="f7/js/demo.js"></script>');
-
 var config = editor.getConfig();
 
 var blockManager = editor.BlockManager;

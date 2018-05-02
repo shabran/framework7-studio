@@ -4,10 +4,7 @@
     "description": "Framework7 Studio",
     "main": "main.js",
     "scripts": {
-        "start": "electron .",
-        "postinstall": "install-app-deps",
-        "pack": "build --dir",
-        "dist": "build"
+        "start": "electron ."
     },
     "build": {
         "appId": "com.nowdb.studio",
@@ -38,16 +35,15 @@
     },
     "repository": "",
     "keywords": [
-        "NowDB",
-        "Studio",
         "Framework7",
-        "tools"
+        "Studio",
+        "UI Builder"
     ],
     "author": "SB Academy <taufiksu@gmail.com, aseprizal70@gmail.com>",
     "license": "CC0-1.0",
     "devDependencies": {
-        "electron": "^1.8.4",
-        "electron-builder": "^20.10.0"
+        "electron": "^2.0.0",
+        "electron-builder": "^20.11.1"
     },
     "dependencies": {
         "electron-packager": "^12.0.1",
