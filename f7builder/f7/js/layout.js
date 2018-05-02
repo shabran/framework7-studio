@@ -38,7 +38,7 @@ blockManager.add('template-1', {
         '</div>',
     category: {
         label: 'Page Template',
-        open: true
+        open: false
     }
 });
 
@@ -99,7 +99,7 @@ blockManager.add('template-2', {
         '</script>',
     category: {
         label: 'Page Template',
-        open: true
+        open: false
     }
 });
 
@@ -153,7 +153,7 @@ blockManager.add('template-3', {
         '</div>',
     category: {
         label: 'Page Template',
-        open: true
+        open: false
     }
 });
 
@@ -204,7 +204,7 @@ blockManager.add('template-4', {
         '</div>',
     category: {
         label: 'Page Template',
-        open: true
+        open: false
     }
 });
 
@@ -272,7 +272,7 @@ blockManager.add('template-5', {
         '</script>',
     category: {
         label: 'Page Template',
-        open: true
+        open: false
     }
 });
 
@@ -318,7 +318,7 @@ blockManager.add('template-6', {
         '</div>',
     category: {
         label: 'Page Template',
-        open: true
+        open: false
     }
 });
 
@@ -381,7 +381,7 @@ blockManager.add('template-7', {
         '</script>',
     category: {
         label: 'Page Template',
-        open: true
+        open: false
     }
 });
 
@@ -437,7 +437,7 @@ blockManager.add('template-8', {
         '</div>',
     category: {
         label: 'Page Template',
-        open: true
+        open: false
     }
 });
 
@@ -490,7 +490,7 @@ blockManager.add('template-9', {
         '</div>',
     category: {
         label: 'Page Template',
-        open: true
+        open: false
     }
 });
 
@@ -560,6 +560,6 @@ blockManager.add('template-10', {
         '</script>',
     category: {
         label: 'Page Template',
-        open: true
+        open: false
     }
 });

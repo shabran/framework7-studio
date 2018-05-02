@@ -6,7 +6,7 @@ blockManager.add('text', {
         title: 'Text'
     },
     content: '  <div class="item-media">' +
-        '    <i class="icon demo-list-icon"></i>' +
+        '    <i class="icon material-icons">info</i>' +
         '  </div>' +
         '  <div class="item-inner">' +
         '    <div class="item-title item-label">Text</div>' +
@@ -29,7 +29,7 @@ blockManager.add('password', {
         title: 'Password'
     },
     content: '  <div class="item-media">' +
-        '    <i class="icon demo-list-icon"></i>' +
+        '    <i class="icon material-icons">info</i>' +
         '  </div>' +
         '  <div class="item-inner">' +
         '    <div class="item-title item-label">Password</div>' +
@@ -52,7 +52,7 @@ blockManager.add('e-mail', {
         title: 'E-mail'
     },
     content: '  <div class="item-media">' +
-        '    <i class="icon demo-list-icon"></i>' +
+        '    <i class="icon material-icons">info</i>' +
         '  </div>' +
         '  <div class="item-inner">' +
         '    <div class="item-title item-label">E-mail</div>' +
@@ -75,7 +75,7 @@ blockManager.add('url', {
         title: 'URL'
     },
     content: '  <div class="item-media">' +
-        '    <i class="icon demo-list-icon"></i>' +
+        '    <i class="icon material-icons">info</i>' +
         '  </div>' +
         '  <div class="item-inner">' +
         '    <div class="item-title item-label">URL</div>' +
@@ -98,7 +98,7 @@ blockManager.add('number', {
         title: 'Number'
     },
     content: '  <div class="item-media">' +
-        '    <i class="icon demo-list-icon"></i>' +
+        '    <i class="icon material-icons">info</i>' +
         '  </div>' +
         '  <div class="item-inner">' +
         '    <div class="item-title item-label">Number</div>' +
@@ -121,7 +121,7 @@ blockManager.add('phone', {
         title: 'Phone'
     },
     content: '  <div class="item-media">' +
-        '    <i class="icon demo-list-icon"></i>' +
+        '    <i class="icon material-icons">info</i>' +
         '  </div>' +
         '  <div class="item-inner">' +
         '    <div class="item-title item-label">Phone</div>' +
@@ -144,7 +144,7 @@ blockManager.add('date', {
         title: 'Date'
     },
     content: '  <div class="item-media">' +
-        '    <i class="icon demo-list-icon"></i>' +
+        '    <i class="icon material-icons">info</i>' +
         '  </div>' +
         '  <div class="item-inner">' +
         '    <div class="item-title item-label">Date</div>' +
@@ -166,7 +166,7 @@ blockManager.add('date_time', {
         title: 'Date Time'
     },
     content: '  <div class="item-media">' +
-        '    <i class="icon demo-list-icon"></i>' +
+        '    <i class="icon material-icons">info</i>' +
         '  </div>' +
         '  <div class="item-inner">' +
         '    <div class="item-title item-label">Date Time</div>' +
@@ -188,7 +188,7 @@ blockManager.add('text_area', {
         title: 'Text Area'
     },
     content: '  <div class="item-media">' +
-        '    <i class="icon demo-list-icon"></i>' +
+        '    <i class="icon material-icons">info</i>' +
         '  </div>' +
         '  <div class="item-inner">' +
         '    <div class="item-title item-label">Text Area</div>' +
@@ -211,7 +211,7 @@ blockManager.add('select', {
         title: 'Select'
     },
     content: '  <div class="item-media">' +
-        '    <i class="icon demo-list-icon"></i>' +
+        '    <i class="icon material-icons">info</i>' +
         '  </div>' +
         '  <div class="item-inner">' +
         '    <div class="item-title item-label">Select</div>' +
@@ -237,7 +237,7 @@ blockManager.add('range_slider', {
         title: 'Range Slider'
     },
     content: '  <div class="item-media">' +
-        '    <i class="icon demo-list-icon"></i>' +
+        '    <i class="icon material-icons">info</i>' +
         '  </div>' +
         '  <div class="item-inner">' +
         '    <div class="item-title item-label">Range Slider</div>' +
