@@ -57,17 +57,19 @@ blockManager.add('searchbar_static', {
         '           <i class="icon material-icons md-only">search</i>' +
         '         </a>' +
         '       </div>' +
-        '       <!-- Searchbar is a direct child of "navbar-inner" -->' +
-        '       <form class="searchbar searchbar-expandable">' +
-        '         <div class="searchbar-inner">' +
-        '           <div class="searchbar-input-wrap">' +
-        '             <input type="search" placeholder="Search"/>' +
-        '             <i class="searchbar-icon"></i>' +
-        '             <span class="input-clear-button"></span>' +
+        '       <div class="subnavbar">' +
+        '         <!-- Searchbar inside of Subnavbar -->' +
+        '         <form class="searchbar">' +
+        '           <div class="searchbar-inner">' +
+        '             <div class="searchbar-input-wrap">' +
+        '               <input type="search" placeholder="Search"/>' +
+        '               <i class="searchbar-icon"></i>' +
+        '               <span class="input-clear-button"></span>' +
+        '             </div>' +
+        '             <span class="searchbar-disable-button">Cancel</span>' +
         '           </div>' +
-        '           <span class="searchbar-disable-button">Cancel</span>' +
-        '         </div>' +
-        '       </form>' +
+        '         </form>' +
+        '       </div>' +
         '   </div>' +
         '</div>',
     category: {

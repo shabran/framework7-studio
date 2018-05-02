@@ -4,7 +4,7 @@ blockManager.add('single-view', {
         class: 'fa fa-square',
         title: 'Single Page'
     },
-    content: '<div class="page"></div>',
+    content: '<div class="page"></div><script src="f7/js/demo.js"></script>',
     category: {
         label: 'Layout',
         open: false
