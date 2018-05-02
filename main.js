@@ -39,7 +39,7 @@ app.on('ready', function() {
                 }
             }]
         }, {
-            label: "Developer",
+            label: "Tools",
             submenu: [{
                 label: "UI Builder",
                 click: function() {
@@ -290,7 +290,7 @@ app.on('ready', function() {
                     }
                 }]
             }, {
-                label: "Dev Tools",
+                label: "Developer Tools",
                 click: function() {
                     mainWindow.webContents.openDevTools()
                 }
@@ -323,9 +323,9 @@ app.on('ready', function() {
                 }
             }]
         }, {
-            label: "Developer",
+            label: "Tools",
             submenu: [{
-                label: "Dev Tools",
+                label: "Developer Tools",
                 click: function() {
                     builderWindow.webContents.openDevTools()
                 }
