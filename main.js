@@ -297,6 +297,31 @@ app.on('ready', function() {
                             var menu = Menu.buildFromTemplate(template);
                             progress.setMenu(menu);
                         }
+                    }, {
+                        label: "Swiper",
+                        click: function() {
+                            swiper = new BrowserWindow({
+                                width: 380,
+                                height: 600,
+                                icon: path.join(__dirname, 'f7builder/img/favicon.png')
+                            })
+                            swiper.loadURL(url.format({
+                                pathname: path.join(__dirname, 'f7builder/index_swiper.html'),
+                                protocol: 'file:',
+                                slashes: true
+                            }))
+                            var template = [{
+                                label: "View",
+                                submenu: [{
+                                    label: "Reload",
+                                    click: function() {
+                                        progress.webContents.reload();
+                                    }
+                                }]
+                            }]
+                            var menu = Menu.buildFromTemplate(template);
+                            swiper.setMenu(menu);
+                        }
                     }
                 ]
             }]
