@@ -43,12 +43,12 @@ blockManager.add('2 Slides Per View', {
         class: 'fa fa-square',
         title: '2 slide per view'
     },
-    content: '    <div data-pagination="{"el": ".swiper-pagination"}" data-space-between="20" data-slides-per-view="2" class="swiper-container swiper-init demo-swiper">' +
-        '  <div class="swiper-pagination"></div>' +
-        '  <div class="swiper-wrapper">' +
-        '    <div class="swiper-slide">Slide 1</div>' +
-        '    <div class="swiper-slide">Slide 2</div>' +
-        '    <div class="swiper-slide">Slide 3</div>' +
+    content: '    <div data-pagination= "{ "el": ".swiper-pagination" }"data-space-between="50" class="swiper-container swiper-init demo-swiper">' +
+        '    <div class="swiper-pagination"></div>' +
+        '    <div class="swiper-wrapper">' +
+        '        <div class="swiper-slide">Slide 1</div>' +
+        '        <div class="swiper-slide">Slide 2</div>' +
+        '        <div class="swiper-slide">Slide 3</div>' +
         '    </div>' +
         '</div>',
     category: {

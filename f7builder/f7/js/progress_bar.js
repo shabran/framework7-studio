@@ -4,9 +4,9 @@ blockManager.add('Determinate', {
         class: 'fa fa-square',
         title: 'Determinate'
     },
-    content: '  <div class="progressbar" data-progress="20">' +
-        '  <span></span>' +
-        '</div>',
+    content: '<div class="block block-strong">' +
+        '<p><span data-progress="10" class="progressbar" id="demo-inline-progressbar"></span></p>' +
+        '<div>',
     category: {
         label: 'Progress Bar',
         open: false
@@ -19,7 +19,11 @@ blockManager.add('Infinite', {
         class: 'fa fa-square',
         title: 'Infinite'
     },
-    content: '<div class="progressbar-infinite"></div>',
+    content: '<div class="block block-strong">' +
+        '<p>' +
+        '  <span class="progressbar-infinite"></span>' +
+        '</p>' +
+        '</div>',
     category: {
         label: 'Progress Bar',
         open: false
